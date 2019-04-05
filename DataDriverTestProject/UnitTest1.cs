@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace DataDriverTestProject
+namespace W3SchoolsProject
 {
     [TestClass]
     public class UnitTest1

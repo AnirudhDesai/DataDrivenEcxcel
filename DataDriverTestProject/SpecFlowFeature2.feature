@@ -1,23 +1,27 @@
-﻿Feature: Paytm POM Scenario
+﻿Feature: w3schools scenario
 	
+#	1.	Go to page https://www.w3schools.com/ 
+#2.	Click on learn html link
+#3.	Click on try it yourself button
+#4.	Click Run button
+#5.	Verify the result
+ 
 
 @mytag
-Scenario: Open Paytm website & Validates services
-	Given I have entered Paytm website
-	When fields like Mobile,Electricity,DTH,Metro are pesent
-	Then check all the corresponding fields are present or not
+Scenario: Validate w3schools learn html link
+	Given I am on w3schools webpage
+	When I click on learn html link
+	Then page should redirect to https://www.w3schools.com/html/default.asp
 
 @mytag
-Scenario: Validate Mobile Recharge Button
-	Given I have entered Paytm website
-	And I click on Mobile option
-	Then Page should navigate to Url https://paytm.com/recharge
+Scenario: Validate TryitYourself
+	Given  I am on learn html webpage
+	When click on try it yourself button
+	Then Page should navigate to Url https://www.w3schools.com/html/tryit.asp?filename=tryhtml_default
 
 
 @mytag
-Scenario: Perform Paytm Recharge
-	Given I have entered Paytm website
-	And I click on Mobile option
-	And also I have entered Mobile number and Amount
-	When I click on Proceed Recharge Button
-	Then Page should Navigate to Proceed to Pay and Url should be https://paytm.com/coupons
+Scenario: Validate run button in try it your self page
+	Given I am at try it yourself work space
+	When I click on Run button
+	Then the output should have "This is a heading" and "this is paragragh" tags

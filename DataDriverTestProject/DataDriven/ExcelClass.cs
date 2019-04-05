@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataDriverTestProject.DataDriven
+namespace W3SchoolsProject.DataDriven
 {
     class ExcelClass
     {
@@ -39,8 +39,10 @@ namespace DataDriverTestProject.DataDriven
 
         }
 
-
-
+        internal static object GetCellData(object xlpath, string v1, int v2, int v3)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 

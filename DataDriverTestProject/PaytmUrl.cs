@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataDriverTestProject
+namespace W3SchoolsProject
 {
     public class PaytmUrl
     {

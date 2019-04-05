@@ -1,5 +1,5 @@
-﻿using DataDriverTestProject;
-using DataDriverTestProject.Settings;
+﻿using W3SchoolsProject;
+using W3SchoolsProject.Settings;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -17,40 +17,40 @@ namespace UnitTestProject4
         IWebElement electricitylink;
         IWebElement mobilelink;
 
-        PaytmHomePagePOM paytmPom = new PaytmHomePagePOM();
+        W3SchoolsHomePage w3schools = new W3SchoolsHomePage();
 
         [Given(@"I have entered Paytm website")]
         public void GivenIHaveEnteredPaytmWebsite()
         {
-            paytmPom.NavigateToPaytmHomePage();
+            w3schools.;
         }
 
 
         [Given(@"I click on Mobile option")]
         public void GivenIClickOnMobileOption()
         {
-            paytmPom.Mobilelinkclick();
+            w3schools.Mobilelinkclick();
         }
 
         [Given(@"also I have entered Mobile number and Amount")]
         public void GivenAlsoIHaveEnteredMobileNumberAndAmount()
         {
-            paytmPom.EnterMobileNumberandAmount();
+            w3schools.EnterMobileNumberandAmount();
         }
 
         [When(@"I click on Proceed Recharge Button")]
         public void WhenIClickOnProceedRechargeButton()
         {
-            paytmPom.Proceedtorecharge();
+            w3schools.Proceedtorecharge();
         }
 
         [When(@"fields like Mobile,Electricity,DTH,Metro are pesent")]
         public void WhenFieldsLikeMobileElectricityDTHMetroArePesent()
         {
-           DTHlink = paytmPom.DTHXpath();
-            metrolink = paytmPom.MetroXpath();
-             electricitylink = paytmPom.ElectricityXpath();
-            mobilelink = paytmPom.MobileXpath();
+           DTHlink = w3schools.DTHXpath();
+            metrolink = w3schools.MetroXpath();
+             electricitylink = w3schools.ElectricityXpath();
+            mobilelink = w3schools.MobileXpath();
 
         }
 
@@ -69,7 +69,7 @@ namespace UnitTestProject4
         [Then(@"Page should navigate to Url https://paytm\.com/recharge")]
         public void ThenPageShouldNavigateToUrlHttpsPaytm_ComRecharge()
         {
-            Assert.AreEqual(paytmPom.GetPaytmRechargeURl(), paytmPom.GetCurrentUrl());
+            Assert.AreEqual(w3schools.GetPaytmRechargeURl(), w3schools.GetCurrentUrl());
         }
 
         [Then(@"Page should Navigate to Proceed to Pay and Url should be https://paytm\.com/coupons")]
@@ -79,13 +79,13 @@ namespace UnitTestProject4
 
 
             // Assert.IsNotNull(paytmPom.GetXpathOfCoupnPage());
-            Assert.IsNotNull(paytmPom.NavigationtoCouponsPage());
+            Assert.IsNotNull(w3schools.NavigationtoCouponsPage());
         }
 
         [AfterScenario]
         public void closeBrowser()
         {
-            paytmPom.CloseBrowser();
+            w3schools.CloseBrowser();
         }
     }
 }

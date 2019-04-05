@@ -1,11 +1,11 @@
-﻿using DataDriverTestProject.Configuration;
+﻿using W3SchoolsProject.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataDriverTestProject.Interfaces
+namespace W3SchoolsProject.Interfaces
 {
     public interface IConfig
     {

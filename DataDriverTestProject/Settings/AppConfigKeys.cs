@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace  DataDriverTestProject.Interfaces
+namespace  W3SchoolsProject.Interfaces
 .Settings
 {
     public class AppConfigKeys

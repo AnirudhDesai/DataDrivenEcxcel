@@ -1,5 +1,5 @@
-﻿using DataDriverTestProject.Interfaces;
-using DataDriverTestProject.Interfaces.Settings;
+﻿using W3SchoolsProject.Interfaces;
+using W3SchoolsProject.Interfaces.Settings;
 
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace DataDriverTestProject.Configuration
+namespace W3SchoolsProject.Configuration
 {
     public class AppConfigReader : IConfig
     {

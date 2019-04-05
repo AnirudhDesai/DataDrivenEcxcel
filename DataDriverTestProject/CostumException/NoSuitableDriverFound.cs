@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataDriverTestProject.CostumException
+namespace W3SchoolsProject.CostumException
 {
     public class NoSuitableDriverFound : Exception
     {

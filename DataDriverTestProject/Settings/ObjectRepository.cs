@@ -1,12 +1,12 @@
 ﻿using OpenQA.Selenium;
-using DataDriverTestProject.Interfaces;
+using W3SchoolsProject.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataDriverTestProject.Settings
+namespace W3SchoolsProject.Settings
 {
     public class ObjectRepository
     {

@@ -18,7 +18,7 @@ namespace DataDriverTestProject
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class PaytmPOMScenarioFeature
+    public partial class W3SchoolsScenarioFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -44,7 +44,7 @@ namespace DataDriverTestProject
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Paytm POM Scenario", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "w3schools scenario", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -59,9 +59,9 @@ namespace DataDriverTestProject
         public virtual void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "Paytm POM Scenario")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "w3schools scenario")))
             {
-                global::DataDriverTestProject.PaytmPOMScenarioFeature.FeatureSetup(null);
+                global::DataDriverTestProject.W3SchoolsScenarioFeature.FeatureSetup(null);
             }
         }
         
@@ -88,69 +88,65 @@ namespace DataDriverTestProject
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open Paytm website & Validates services")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Paytm POM Scenario")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate w3schools learn html link")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "w3schools scenario")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("mytag")]
-        public virtual void OpenPaytmWebsiteValidatesServices()
+        public virtual void ValidateW3SchoolsLearnHtmlLink()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open Paytm website & Validates services", null, new string[] {
-                        "mytag"});
-#line 5
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 6
- testRunner.Given("I have entered Paytm website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 7
- testRunner.When("fields like Mobile,Electricity,DTH,Metro are pesent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 8
- testRunner.Then("check all the corresponding fields are present or not", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Mobile Recharge Button")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Paytm POM Scenario")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("mytag")]
-        public virtual void ValidateMobileRechargeButton()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate Mobile Recharge Button", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate w3schools learn html link", null, new string[] {
                         "mytag"});
 #line 11
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 12
- testRunner.Given("I have entered Paytm website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I am on w3schools webpage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 13
- testRunner.And("I click on Mobile option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I click on learn html link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 14
- testRunner.Then("Page should navigate to Url https://paytm.com/recharge", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("page should redirect to https://www.w3schools.com/html/default.asp", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Perform Paytm Recharge")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Paytm POM Scenario")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate TryitYourself")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "w3schools scenario")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("mytag")]
-        public virtual void PerformPaytmRecharge()
+        public virtual void ValidateTryitYourself()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Perform Paytm Recharge", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate TryitYourself", null, new string[] {
                         "mytag"});
-#line 18
+#line 17
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
+#line 18
+ testRunner.Given("I am on learn html webpage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 19
- testRunner.Given("I have entered Paytm website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.When("click on try it yourself button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 20
- testRunner.And("I click on Mobile option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 21
- testRunner.And("also I have entered Mobile number and Amount", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 22
- testRunner.When("I click on Proceed Recharge Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 23
- testRunner.Then("Page should Navigate to Proceed to Pay and Url should be https://paytm.com/coupon" +
-                    "s", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("Page should navigate to Url https://www.w3schools.com/html/tryit.asp?filename=try" +
+                    "html_default", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate run button in try it your self page")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "w3schools scenario")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("mytag")]
+        public virtual void ValidateRunButtonInTryItYourSelfPage()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate run button in try it your self page", null, new string[] {
+                        "mytag"});
+#line 24
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 25
+ testRunner.Given("I am at try it yourself work space", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 26
+ testRunner.When("I click on Run button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 27
+ testRunner.Then("the output should have \"This is a heading\" and \"this is paragragh\" tags", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

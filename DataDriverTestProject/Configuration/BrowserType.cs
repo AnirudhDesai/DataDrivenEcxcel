@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataDriverTestProject.Configuration
+namespace W3SchoolsProject.Configuration
 {
     public enum BrowserType
     {

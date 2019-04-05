@@ -3,16 +3,16 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
-using DataDriverTestProject.Configuration;
-using DataDriverTestProject.Settings;
+using W3SchoolsProject.Configuration;
+using W3SchoolsProject.Settings;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DataDriverTestProject.CostumException;
+using W3SchoolsProject.CostumException;
 
-namespace DataDriverTestProject.Baseclass
+namespace W3SchoolsProject.Baseclass
 {
     [TestClass]
     public class BaseClass

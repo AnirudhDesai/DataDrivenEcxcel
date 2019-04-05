@@ -78,8 +78,9 @@
     <Compile Include="DataDriven\ExcelClass.cs" />
     <Compile Include="ExcelClass.cs" />
     <Compile Include="Interfaces\IConfig.cs" />
-    <Compile Include="PaytmHomePagePOM.cs" />
-    <Compile Include="PaytmPOMScenarioSteps.cs" />
+    <Compile Include="Pages\LearnHtmlPage.cs" />
+    <Compile Include="Pages\Run.cs" />
+    <Compile Include="Pages\W3SchoolsHomePage.cs" />
     <Compile Include="PaytmUrl.cs" />
     <Compile Include="Settings\AppConfigKeys.cs" />
     <Compile Include="Settings\ObjectRepository.cs" />
@@ -90,6 +91,7 @@
     </Compile>
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="W3SchoolsScenarioSteps.cs" />
     <Compile Include="XpathClass.cs" />
   </ItemGroup>
   <ItemGroup>
