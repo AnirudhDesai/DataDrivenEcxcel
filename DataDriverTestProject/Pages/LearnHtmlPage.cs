@@ -9,22 +9,35 @@ using System.Threading.Tasks;
 
 namespace DataDriverTestProject.Pages
 {
-    class LearnHtmlPage
+    public class LearnHtmlPage
     {
         string xlpath = @"C:\Users\ee209973\Desktop\Data.xlsx";
-        private IWebDriver _driver;
+        private readonly IWebDriver _driver;
        
 
         public LearnHtmlPage(IWebDriver driver)
         {
             _driver = driver;
         }
-        public IWebDriver Tryityourself()
+        public  Run Tryityourself()
         {
-          //  _driver.FindElement(By.XPath(ExcelClass.GetCellData(xlpath, "Sheet1", 1, 1).ToString())).Click();
-            _driver.FindElement(By.XPath("//*[@id='main']/div[4]/a")).Click();
-            return _driver;
+            _driver.FindElement(By.XPath(ExcelClass.GetCellData(xlpath, "Sheet1", 1, 1).ToString())).Click();
+              //_driver.FindElement(By.XPath("//*[@id='main']/div[4]/a")).Click();
+            return (new Run(_driver));
 
+        }
+        public  bool test()
+        {
+            try
+            {
+                _driver.FindElement(By.XPath("/html/body/div[5]/div"));
+                return false;
+            }
+            catch(Exception e)
+            {
+                return true;
+            }
+            
         }
     }
 }

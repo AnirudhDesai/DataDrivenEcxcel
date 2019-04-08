@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataDriverTestProject.Pages;
 
 namespace W3SchoolsProject
 {
@@ -18,33 +19,39 @@ namespace W3SchoolsProject
     {
 
         string xlpath = @"C:\Users\ee209973\Desktop\Data.xlsx";
-        static IWebDriver _driver;
+       private readonly IWebDriver _driver;
 
-        public W3SchoolsHomePage()
+        public W3SchoolsHomePage(IWebDriver driver)
         {
-         
 
+            _driver = driver;
 
         }
-
-
-
-
-        public static void NavigatetoW3schools()
+        public  IWebDriver NavigatetoW3schools()
         {
-            NavigationHelper.NavigateToUrl(ObjectRepository.Config.GetWebsite());
-
-            ObjectRepository.Driver.Manage().Window.Maximize();
-            _driver = ObjectRepository.Driver;
+            
+           return ObjectRepository.Driver;
         }
-        public IWebDriver ClickLearnHtmllink()
+        public  LearnHtmlPage ClickLearnHtmllink()
         {
 
-            _driver.FindElement(By.XPath("//*[@id='mySidenav']/div/a[1]")).Click();
+          //  _driver.FindElement(By.XPath("//*[@id='mySidenav']/div/a[1]")).Click();
+            _driver.FindElement(By.XPath(ExcelClass.GetCellData(xlpath, "Sheet1", 1, 0).ToString())).Click();
+            return (new LearnHtmlPage(_driver));
+        }
+     public bool test()
+        {
+            try
+            {
+                _driver.FindElement(By.XPath("//*[@id='main']"));
+               // _driver.FindElement(By.XPath(ExcelClass.GetCellData(xlpath, "Sheet1", 1, 3).ToString())).Click();
 
-            return _driver;
-
-
+                return false;
+            }
+            catch (Exception e)
+            {
+                return true;
+            }
         }
 
 

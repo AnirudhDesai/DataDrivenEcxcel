@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataDriverTestProject.Pages
 {
-    class Run
+    public class Run
     {
         string xlpath = @"C:\Users\ee209973\Desktop\Data.xlsx";
         private IWebDriver _driver;
@@ -20,8 +20,19 @@ namespace DataDriverTestProject.Pages
         }
         public void Tryityourself()
         {
-            _driver.FindElement(By.XPath(ExcelClass.GetCellData(xlpath, "Sheet1", 1, 2).ToString())).Click();
-
+          //  _driver.FindElement(By.ClassName("w3-button w3-bar-item w3-green w3-hover-white w3-hover-text-green")).Click();
+        }
+        public bool test()
+        {
+            try
+            {
+                _driver.FindElement(By.XPath("/html/body/h1"));
+                return false;
+            }
+            catch (Exception e)
+            {
+                return true;
+            }
 
         }
     }

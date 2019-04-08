@@ -4,6 +4,7 @@ using OpenQA.Selenium;
 using System;
 using TechTalk.SpecFlow;
 using W3SchoolsProject;
+using W3SchoolsProject.ComponentHelper;
 using W3SchoolsProject.Settings;
 
 namespace DataDriverTestProject
@@ -11,65 +12,70 @@ namespace DataDriverTestProject
     [Binding]
     public class W3SchoolsScenarioSteps
     {
+        private static LearnHtmlPage _learnpage;
+        private static W3SchoolsHomePage homepage;
+        private static LearnHtmlPage learnpage;
+        private static IWebDriver driver;
+        private static Run run;
+        private static Run _run;
 
-        private W3SchoolsHomePage homepage;
-        private LearnHtmlPage learnpage;
-        private Run run;
         [Given]
-        public void GivenIAmOnW_P0_SchoolsWebpage(int p0)
+        public void GivenIAmOnWschoolsWebpage()
         {
-            homepage = new W3SchoolsHomePage();
-            W3SchoolsHomePage.NavigatetoW3schools();
-
+            NavigationHelper.NavigateToUrl(ObjectRepository.Config.GetWebsite());
+            
+            homepage = new W3SchoolsHomePage(ObjectRepository.Driver);
+          
         }
-        
+
         [Given]
         public void GivenIAmOnLearnHtmlWebpage()
         {
-            learnpage = new LearnHtmlPage(ObjectRepository.Driver);
-           
+            _learnpage = learnpage;
         }
-        
+
         [Given]
         public void GivenIAmAtTryItYourselfWorkSpace()
         {
-            run = new Run(ObjectRepository.Driver);
+            _run = run;
         }
-        
+
         [When]
         public void WhenIClickOnLearnHtmlLink()
         {
-            ObjectRepository.Driver=homepage.ClickLearnHtmllink();
+            learnpage = homepage.ClickLearnHtmllink();
         }
-        
+
         [When]
         public void WhenClickOnTryItYourselfButton()
         {
-            ObjectRepository.Driver=learnpage.Tryityourself();
+            run = learnpage.Tryityourself();
         }
-        
+
         [When]
         public void WhenIClickOnRunButton()
         {
             run.Tryityourself();
         }
-        
+
         [Then]
-        public void ThenPageShouldRedirectToHttpsWwwW_P0_SchoolsComHtmlDefaultAsp(int p0)
+        public void ThenPageShouldRedirectTo_P0(string p0)
         {
-            Assert.IsNotNull(ObjectRepository.Driver.FindElement(By.XPath("//*[@id='main']")));
+            Assert.IsFalse(homepage.test());
         }
-        
+
         [Then]
-        public void ThenPageShouldNavigateToUrlHttpsWwwW_P0_SchoolsComHtmlTryitAspFilenameTryhtml_default(int p0)
+        public void ThenPageShouldNavigateToUrl_P0(string p0)
         {
-            Assert.IsNotNull(ObjectRepository.Driver.FindElement(By.XPath("/html/body/div[5]/div")));
+            Assert.IsFalse(learnpage.test());
         }
-        
+
         [Then]
         public void ThenTheOutputShouldHave_P0_And_P1_Tags(string p0, string p1)
         {
-            Assert.IsNotNull(ObjectRepository.Driver.FindElement(By.XPath("/html/body/h1")));
+            Assert.IsNotNull(run.test());
         }
     }
 }
+
+

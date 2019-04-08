@@ -99,11 +99,11 @@ namespace DataDriverTestProject
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 12
- testRunner.Given("I am on w3schools webpage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I am on wschools webpage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 13
  testRunner.When("I click on learn html link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 14
- testRunner.Then("page should redirect to https://www.w3schools.com/html/default.asp", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("page should redirect to \'https://www.w3schools.com/html/default.asp\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -124,8 +124,8 @@ this.ScenarioInitialize(scenarioInfo);
 #line 19
  testRunner.When("click on try it yourself button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 20
- testRunner.Then("Page should navigate to Url https://www.w3schools.com/html/tryit.asp?filename=try" +
-                    "html_default", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("Page should navigate to Url \'https://www.w3schools.com/html/tryit.asp?filename=tr" +
+                    "yhtml_default\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

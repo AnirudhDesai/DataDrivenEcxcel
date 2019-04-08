@@ -9,15 +9,15 @@
 
 @mytag
 Scenario: Validate w3schools learn html link
-	Given I am on w3schools webpage
+	Given I am on wschools webpage
 	When I click on learn html link
-	Then page should redirect to https://www.w3schools.com/html/default.asp
+	Then page should redirect to 'https://www.w3schools.com/html/default.asp'
 
 @mytag
 Scenario: Validate TryitYourself
 	Given  I am on learn html webpage
 	When click on try it yourself button
-	Then Page should navigate to Url https://www.w3schools.com/html/tryit.asp?filename=tryhtml_default
+	Then Page should navigate to Url 'https://www.w3schools.com/html/tryit.asp?filename=tryhtml_default'
 
 
 @mytag
