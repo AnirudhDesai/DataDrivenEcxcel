@@ -26,7 +26,8 @@ namespace DataDriverTestProject.Pages
         {
             try
             {
-                _driver.FindElement(By.XPath("/html/body/h1"));
+                _driver.FindElement(By.XPath(ExcelClass.GetCellData(xlpath, "Sheet1", 1, 3).ToString()));
+                //_driver.FindElement(By.XPath("/html/body/h1"));
                 return false;
             }
             catch (Exception e)

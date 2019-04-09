@@ -13,6 +13,7 @@ namespace DataDriverTestProject.Pages
     {
         string xlpath = @"C:\Users\ee209973\Desktop\Data.xlsx";
         private readonly IWebDriver _driver;
+
        
 
         public LearnHtmlPage(IWebDriver driver)
@@ -30,7 +31,8 @@ namespace DataDriverTestProject.Pages
         {
             try
             {
-                _driver.FindElement(By.XPath("/html/body/div[5]/div"));
+                _driver.FindElement(By.XPath(ExcelClass.GetCellData(xlpath, "Sheet1", 1, 2).ToString()));
+               // _driver.FindElement(By.XPath("/html/body/div[5]/div"));
                 return false;
             }
             catch(Exception e)

@@ -43,8 +43,8 @@ namespace W3SchoolsProject
         {
             try
             {
-                _driver.FindElement(By.XPath("//*[@id='main']"));
-               // _driver.FindElement(By.XPath(ExcelClass.GetCellData(xlpath, "Sheet1", 1, 3).ToString())).Click();
+              // _driver.FindElement(By.XPath("//*[@id='main']"));
+                _driver.FindElement(By.XPath(ExcelClass.GetCellData(xlpath, "Sheet1", 1, 4).ToString()));
 
                 return false;
             }
